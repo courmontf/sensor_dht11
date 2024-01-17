@@ -18,6 +18,7 @@ git clone $GIT_REPOSITORY /tmp/sensor_dht11
 cd /tmp/sensor_dht11/sensor_dht11
 $SUDO cp -r /tmp/sensor_dht11/sensor_dht11 $INSTALL_DIR
 cd $INSTALL_DIR
+$SUDO chown -R $(whoami) .
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
