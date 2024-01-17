@@ -13,6 +13,7 @@ if ! which sudo >/dev/null; then
 	fi
 fi
 
+$SUDO apt-get install libgpiod2
 git clone $GIT_REPOSITORY /tmp/sensor_dht11
 cd /tmp/sensor_dht11/sensor_dht11
 python -m venv venv
