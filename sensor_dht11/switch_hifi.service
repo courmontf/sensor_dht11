@@ -1,0 +1,14 @@
+[Unit]
+Description=Sensor DHT11 (temperature and humidity)
+Documentation=https://github.com/courmontf/sensor_dht11
+Wants=network.target
+After=network.target
+
+[Service]
+User=sensor_dht11
+SupplementaryGroups=gpio
+WorkingDirectory=/opt/sensor_dht11
+ExecStart=/opt/sensor_dht11/start_service.sh
+
+[Install]
+WantedBy=multi-user.target
